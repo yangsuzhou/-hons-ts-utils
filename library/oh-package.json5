@@ -1,0 +1,10 @@
+{
+    "name": "@hons/ts-utils",
+    "version": "1.0.0",
+    "description": "纯TS库",
+    "main": "Index.ets",
+    "author": "Hons",
+    "keywords": ["倒计时"],
+    "license": "MIT",
+    "dependencies": {}
+}
