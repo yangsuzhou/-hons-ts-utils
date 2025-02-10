@@ -1,5 +1,5 @@
 {
-    "name": "hons-utils",
+    "name": "@hons/utils",
     "version": "1.0.0",
     "description": "纯TS库,用于处理日常逻辑，例如倒计时功能",
     "main": "Index.ets",
