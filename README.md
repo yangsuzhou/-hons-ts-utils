@@ -1,12 +1,10 @@
-# 倒计时函数
-`js
+# @hons/utils (纯TS工具函数)
 
-    import { honsUtils } from '@hons/utils'
+## 下载安装与使用说明
 
-    const stop = honsUtils.countdown(remainSeconds, obj => {
-        console.log(JSON.stringify(obj))
-    })
+`ohpm i @hons/utils`
 
-    // 停止倒计时
-    stop()
-`
+| 方法          | 介绍    |
+|:------------|:------|
+| countDown   | 倒计时   |
+| formatPrice | 价格格式化 |

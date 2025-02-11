@@ -12,7 +12,13 @@ class HonsUtils {
         return { hour: this.padStart(hour), minute: this.padStart(minute), second: this.padStart(second) }
     }
 
-    countdown(seconds: number, callback: Callback) {
+    /**
+     * 倒计时
+     * @param seconds 倒计时秒数
+     * @param callback 回调函数
+     * @returns 清除倒计时
+     */
+    countDown(seconds: number, callback: Callback): () => void {
         let ticker: number | null = 0
         let remainingSeconds = seconds
         let startTime = Date.now()
@@ -35,6 +41,28 @@ class HonsUtils {
             clearTimeout(ticker)
             ticker = null
         }
+    }
+
+    /**
+     * 格式化价格
+     * @param price 价格
+     * @param syncDotLen 是否同步小数点长度
+     */
+    formatPrice(price: number | string, syncDotLen: boolean = true): string {
+        const dotLen = price.toString().split('.')[1]?.length || 0
+        let res = price.toString().replace(/\d+/, n => {
+            return n.replace(/(\d)(?=(\d{3})+$)/g, ($1) => {
+                return $1 + ','
+            })
+        })
+        if (dotLen && syncDotLen) {
+            res = res.replace(/\d+\.\d+/, (n) => {
+                return n.replace(/(\d)(?=(\d{3})+\.)/g, ($1) => {
+                    return $1 + ','
+                })
+            })
+        }
+        return res
     }
 }
 

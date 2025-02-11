@@ -1,10 +1,10 @@
 {
     "name": "@hons/utils",
     "version": "1.0.0",
-    "description": "纯TS库,用于处理日常逻辑，例如倒计时功能",
+    "description": "纯TS库,用于处理日常逻辑，例如倒计时功能、价格格式化处理",
     "main": "Index.ets",
     "author": {"name": "Hons"},
-    "keywords": ["倒计时"],
+    "keywords": ["倒计时", "格式化价格"],
     "license": "MIT",
     "homepage": "https://github.com/yangsuzhou/-hons-ts-utils",
     "repository": "https://github.com/yangsuzhou/-hons-ts-utils",
