@@ -4,4 +4,4 @@ export interface CallbackParameters {
     second: string
 }
 
-export type Callback = (params: CallbackParameters) => void
+export type Callback = (params: CallbackParameters, remainAllSeconds: number) => void

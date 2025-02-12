@@ -11,15 +11,16 @@
 
 # Usage
 
-`
+```
+ import { honsUtils } from '@hons/utils'
 
-    import { honsUtils } from '@hons/utils'
-
-    const stop = honsUtils.countDown(remainSeconds, obj => {
+    const stop = honsUtils.countDown(remainSeconds, (obj, remainSeconds) => {
         console.log(JSON.stringify(obj))
+        if (remainSeconds === 0) {
+            // 写入倒计时结束时的逻辑处理
+        }
     })
 
     // 停止倒计时
     stop()
-
-`
+```

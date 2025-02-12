@@ -28,12 +28,12 @@ class HonsUtils {
             const currentTime = Date.now()
             const drift = currentTime - expectedTime
             if (remainingSeconds > 0) {
-                callback(this.formatTime(remainingSeconds))
+                callback(this.formatTime(remainingSeconds), remainingSeconds)
                 remainingSeconds--
                 expectedTime += 1000
                 ticker = setTimeout(tick, Math.max(0, 1000 - drift))
             } else {
-                callback(this.formatTime(0))
+                callback(this.formatTime(0), 0)
             }
         }
         tick()

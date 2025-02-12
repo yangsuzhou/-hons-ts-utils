@@ -1,6 +1,6 @@
 {
     "name": "@hons/utils",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "纯TS库,用于处理日常逻辑，例如倒计时功能、价格格式化处理",
     "main": "Index.ets",
     "author": {"name": "Hons"},
