@@ -1,6 +1,6 @@
 {
     "name": "@hons/utils",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "包含纯TS库以及UI组件,用于处理日常逻辑，例如倒计时功能、价格格式化处理, 如 具有下划线并且可滑动的Tab",
     "main": "Index.ets",
     "author": {
