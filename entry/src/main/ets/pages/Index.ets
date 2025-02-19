@@ -30,8 +30,9 @@ struct Index {
         Column() {
             Text(this.curTab.toString())
             TabLine({
-                gutter: 12,
+                gutter: 160,
                 enableScroll: true,
+                forceInView: true,
                 index: this.curTab,
                 lineTrack: { strokeWidth: 1, color: 'rgba(0,0,0,0.12)' },
                 lineStyle: { strokeWidth: 1, color: '#AA000000' },

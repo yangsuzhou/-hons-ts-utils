@@ -1,12 +1,18 @@
 {
     "name": "@hons/utils",
-    "version": "1.0.1",
-    "description": "纯TS库,用于处理日常逻辑，例如倒计时功能、价格格式化处理",
+    "version": "1.0.2",
+    "description": "包含纯TS库以及UI组件,用于处理日常逻辑，例如倒计时功能、价格格式化处理, 如 具有下划线并且可滑动的Tab",
     "main": "Index.ets",
-    "author": {"name": "Hons"},
-    "keywords": ["倒计时", "格式化价格"],
+    "author": {
+        "name": "Hons"
+    },
+    "keywords": [
+        "倒计时 countDown",
+        "格式化价格 formatPrice",
+        "可滚动且可配置下划线的TabLine组件"
+    ],
     "license": "MIT",
-    "homepage": "https://github.com/yangsuzhou/-hons-ts-utils",
-    "repository": "https://github.com/yangsuzhou/-hons-ts-utils",
+    "homepage": "https://github.com/yangsuzhou/hons-ts-utils",
+    "repository": "https://github.com/yangsuzhou/hons-ts-utils",
     "dependencies": {}
 }

@@ -20,8 +20,9 @@ export struct TabLine {
     @Prop lineStyle: LineStyleType = defaultLineStyle
     @Prop lineTrack: LineStyleType = defaultLineTrackStyle
     @Prop itemHeight: Length = 44
-    @Prop enableScroll: boolean = false
+    @Prop enableScroll: boolean = true
     @Prop duration: number = 100
+    @Prop forceInView: boolean = true
 
     aboutToAppear(): void {
         this.changeOffset(true)
@@ -64,7 +65,9 @@ export struct TabLine {
             this.index = idx
             this.onChange?.(this.index)
             this.changeOffset()
-            this.changeScrollPosition(idx)
+            if (this.forceInView) {
+                this.changeScrollPosition(idx)
+            }
         })
         .onAreaChange((old, newV) => {
             this.widthItemList[idx] = newV.width
