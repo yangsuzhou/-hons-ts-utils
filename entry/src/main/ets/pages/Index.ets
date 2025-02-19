@@ -21,7 +21,6 @@ struct Index {
             .fontWeight(FontWeight.Bold)
             .fontColor(this.curTab === index ? Color.Red : Color.Black)
             .onClick(() => {
-                console.log('55555555', index)
                 this.curTab = index
             })
     }
@@ -30,7 +29,8 @@ struct Index {
         Column() {
             Text(this.curTab.toString())
             TabLine({
-                gutter: 160,
+                gutter: 16,
+                itemHeight: 'auto',
                 enableScroll: true,
                 forceInView: true,
                 index: this.curTab,

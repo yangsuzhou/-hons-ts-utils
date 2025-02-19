@@ -60,7 +60,7 @@ export struct TabLine {
         Row() {
             this.itemGenerator(item, idx)
         }
-        .height('100%')
+        .height(this.itemHeight)
         .onTouch(() => {
             this.index = idx
             this.onChange?.(this.index)
@@ -103,14 +103,14 @@ export struct TabLine {
                     }, this.keyGenerator)
                 }
                 .width(this.enableScroll ? 'auto' : '100%')
-                .height('100%')
+                .height(this.itemHeight)
                 .justifyContent(this.enableScroll ? FlexAlign.Start : FlexAlign.SpaceBetween)
                 .onAreaChange((old, newV) => {
                     this.widthBox = newV.width
                 })
 
                 this.LineBuilder()
-            }.constraintSize({ minWidth: '100%' }).height('100%')
+            }.constraintSize({ minWidth: '100%' }).height(this.itemHeight)
         }
         .width('100%')
         .height(this.itemHeight)
